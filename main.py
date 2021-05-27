@@ -29,7 +29,7 @@ bot.run(main())
 bot.start()
 @bot.on_message(filters.command("restart") & filters.user(Config.ADMINS))
 def restart(client, message):
-    message.reply_text("Restarting...")
+    message.reply_text("Yeniden başlıyorum...")
     Thread(
         target=stop_and_restart
         ).start()
