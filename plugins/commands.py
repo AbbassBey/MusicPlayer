@@ -3,29 +3,29 @@ from pyrogram import Client, filters
 
 
 
-HOME_TEXT = "Helo, [{}](tg://user?id={})\n\n Iam MusicPlayer bot which plays music in Channels and Groups 24*7"
-HELP = """**Common Commands**:
+HOME_TEXT = "Merhaba, [{}](tg://user?id={})\n\n Ben gruplarda ve kanallarda müzik ve radio açabilirim 24*7"
+HELP = """**Komutlar**:
 
-**/play**  Reply with an audio to play/queue it, or show playlist
-**/player**  Show current playing time of current track
-**/help** Show help for commands
-**/playlist** Shows the playlist.
+**/play**  Sesli yanıtla play/queue veya oynatma listesini göster
+**/player**  Geçerli parçanın geçerli çalma süresini göster
+**/help** Komutlar için yardımı göster
+**/playlist** Çalma listesini gösterir.
 
-**Admin Commands**:
-**/skip** [n] ...  Skip current or n where n >= 2
-**/join**  Join voice chat of current group
-**/leave**  Leave current voice chat
-**/vc**  Check which VC is joined
-**/stop**  Stop playing
-**/radio** Start Radio
-**/stopradio** Stops Radio Stream
-**/replay**  Play from the beginning
-**/clean** Remove unused RAW PCM files
-**/pause** Pause playing
-**/resume** Resume playing
-**/mute**  Mute the VC userbot
-**/unmute**  Unmute the VC userbot
-**/restart** Restarts the Bot
+**Admin komutları**:
+**/skip** [n] ...  sıradaki şarkıya geçer n >= 2
+**/join**  Mevcut grubun sesli sohbetine katılın
+**/leave**  Mevcut sesli sohbetten ayrıl
+**/vc**  Hangi VC'nin katıldığını kontrol edin
+**/stop**  Müziği durdurur
+**/radio** Radioyu başlatır
+**/stopradio** Radio durdurur
+**/replay**  Baştan başlatır şarkıyı
+**/clean** Kullanılmayan RAW PCM dosyalarını kaldırın
+**/pause** Oynatmayı duraklat
+**/resume** Oynamaya devam et
+**/mute**  VC kullanıcı botunu sessize alın
+**/unmute**  VC kullanıcı robotunun sesini açın
+**/restart** Botu yeniden başlatır
 """
 
 
@@ -34,12 +34,14 @@ HELP = """**Common Commands**:
 async def start(client, message):
     buttons = [
         [
-        InlineKeyboardButton('Update Channel', url='https://t.me/subin_works'),
-        InlineKeyboardButton('Other Bots', url='https://t.me/subin_works/84'),
+        InlineKeyboardButton('Güncelleme kanalı', url='https://t.me/zevzekcalardestek'),
+        InlineKeyboardButton('Ses botu hesabı', url='https://t.me/zevzekcalarasistan'),
+        InlineKeyboardButton('Güncelleme grubu', url='https://t.me/zevzekcalardestekgrup'),
     ],
     [
-        InlineKeyboardButton('Bugs?', url='https://t.me/subinps'),
-        InlineKeyboardButton('Source', url='https://github.com/subinps/MusicPlayer'),
+        InlineKeyboardButton('Sahip', url='https://t.me/abbassbey'),
+        InlineKeyboardButton('Sahip Biografisi', url='https://t.me/biolinki'),
+        InlineKeyboardButton('Sahip Kanalları', url='https://t.me/kanaltoplist'),
     ],
     [
         InlineKeyboardButton('Help', callback_data='help'),
