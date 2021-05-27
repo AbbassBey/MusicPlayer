@@ -8,7 +8,7 @@ ADMINS=Config.ADMINS
 @Client.on_message(filters.command("radio") & filters.user(ADMINS))
 async def radio(client, message: Message):
     if 1 in RADIO:
-        await message.reply_text("Lütfen mevcut Radyo Akışını durdurun /stopradio")
+        await message.reply_text("Lütfen mevcut olan radio akışını durdurun. /stopradio")
         return
     await mp.start_radio()
     await message.reply_text(f"Başlatılan Radyo: <code>{STREAM_URL}</code>")
