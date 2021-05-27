@@ -8,15 +8,15 @@ ADMINS=Config.ADMINS
 @Client.on_message(filters.command("radio") & filters.user(ADMINS))
 async def radio(client, message: Message):
     if 1 in RADIO:
-        await message.reply_text("Kindly stop existing Radio Stream /stopradio")
+        await message.reply_text("Lütfen mevcut Radyo Akışını durdurun /stopradio")
         return
     await mp.start_radio()
-    await message.reply_text(f"Started Radio: <code>{STREAM_URL}</code>")
+    await message.reply_text(f"Başlatılan Radyo: <code>{STREAM_URL}</code>")
 
 @Client.on_message(filters.command('stopradio') & filters.user(ADMINS))
 async def stop(_, message: Message):
     if 0 in RADIO:
-        await message.reply_text("Kindly start Radio First /radio")
+        await message.reply_text("Lütfen Önce Radyoyu başlatın /radio")
         return
     await mp.stop_radio()
-    await message.reply_text("Radio stream ended.")
+    await message.reply_text("Radyo yayını sona erdi.")
